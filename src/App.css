@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+body {
+  background: #0b1120;
+}
+
+button,
+select,
+textarea,
+input {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.11);
+  transition: 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.app {
+  min-height: 100vh;
+  padding: 30px;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.2), transparent 35%),
+    linear-gradient(135deg, #020617, #111827);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard {
+  width: min(1450px, 96vw);
+  min-height: 850px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+}
+
+.sidebar,
+.translator-card,
+.quiz-card,
+.flashcard-section {
+  background: rgba(15, 23, 42, 0.86);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.35);
+}
+
+.sidebar {
+  border-radius: 30px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 66px;
+  height: 66px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  font-size: 1.9rem;
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  margin-bottom: 30px;
+}
+
+.eyebrow {
+  color: #60a5fa;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.sidebar h1 {
+  color: white;
+  font-size: 2.3rem;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.progress-card {
+  margin-top: 30px;
+}
+
+.progress-top span {
+  color: white;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.progress-top p {
+  color: #cbd5e1;
+  margin-top: 5px;
+}
+
+.progress-track {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.progress-track div {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.topbar select {
+  padding: 13px 18px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: white;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 20px;
+}
+
+.translator-card,
+.quiz-card,
+.flashcard-section {
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.section-title h3 {
+  color: white;
+  font-size: 1.35rem;
+}
+
+textarea,
+input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  outline: none;
+  border-radius: 18px;
+  color: white;
+  background: rgba(2, 6, 23, 0.48);
+  padding: 16px;
+}
+
+textarea {
+  height: 145px;
+  resize: none;
+  margin-bottom: 16px;
+}
+
+input {
+  margin: 18px 0;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #94a3b8;
+}
+
+textarea:focus,
+input:focus {
+  border-color: rgba(96, 165, 250, 0.8);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.13);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.primary {
+  background: linear-gradient(135deg, #2563eb, #9333ea);
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.25);
+}
+
+.ghost {
+  background: rgba(96, 165, 250, 0.13);
+  color: #bfdbfe;
+}
+
+.danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fecaca;
+}
+
+.result-box {
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(2, 6, 23, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.result-box p {
+  color: #93c5fd;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.result-box h4 {
+  color: white;
+  font-size: 2.1rem;
+  margin-bottom: 18px;
+}
+
+.message,
+.quiz-result {
+  margin-top: 16px;
+  color: #facc15;
+  font-weight: 700;
+}
+
+.score {
+  color: #93c5fd;
+  font-weight: 900;
+}
+
+.empty-box {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.empty-box p,
+.quiz-area p,
+.empty-text {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.empty-box button {
+  margin-top: 20px;
+}
+
+.quiz-area h4 {
+  color: white;
+  font-size: 2rem;
+  margin-top: 12px;
+}
+
+.flashcard-section {
+  flex: 1;
+}
+
+.empty-text {
+  padding: 20px 0;
+}
+
+.flashcard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.mini-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(2, 6, 23, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mini-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mini-top span {
+  color: #93c5fd;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.mini-top button {
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  color: #fecaca;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.mini-card h4 {
+  color: white;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.mini-card p {
+  color: #cbd5e1;
+  margin-bottom: 14px;
+}
+
+.speak-small {
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  color: #bfdbfe;
+  background: rgba(96, 165, 250, 0.14);
+}
+
+@media (max-width: 1100px) {
+  .dashboard,
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .flashcard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sidebar {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 15px;
+  }
+
+  .topbar,
+  .section-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flashcard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar h1 {
+    font-size: 1.9rem;
+  }
+
+  .result-box h4 {
+    font-size: 1.6rem;
+  }
+
+  .button-row button {
+    width: 100%;
+  }
+}
